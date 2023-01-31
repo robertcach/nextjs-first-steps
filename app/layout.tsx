@@ -1,4 +1,16 @@
+import Link from "next/link";
 import "./globals.css";
+
+const navLinks = [
+  {
+    label: "Home",
+    route: "/",
+  },
+  {
+    label: "About",
+    route: "/about",
+  },
+];
 
 export default function RootLayout({
   children,
@@ -12,7 +24,11 @@ export default function RootLayout({
         <header>
           <nav>
             <ul>
-              <li>Home</li>
+              {navLinks.map(({ label, route }) => (
+                <li key={label}>
+                  <Link href={route}>{label}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </header>
