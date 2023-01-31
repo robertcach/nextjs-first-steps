@@ -1,16 +1,5 @@
-import Link from "next/link";
+import Header from "./components/Header/Header";
 import "./globals.css";
-
-const navLinks = [
-  {
-    label: "Home",
-    route: "/",
-  },
-  {
-    label: "About",
-    route: "/about",
-  },
-];
 
 export default function RootLayout({
   children,
@@ -21,17 +10,7 @@ export default function RootLayout({
     <html>
       <head />
       <body>
-        <header>
-          <nav>
-            <ul>
-              {navLinks.map(({ label, route }) => (
-                <li key={label}>
-                  <Link href={route}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
+        <Header />
         <main>{children}</main>
       </body>
     </html>
