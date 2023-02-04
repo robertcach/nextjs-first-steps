@@ -1,4 +1,4 @@
-import { NavLink } from "./interfaces/general";
+import { NavLink } from "../interfaces/general";
 
 export const NAV_LINKS: NavLink[] = [
   {
@@ -6,7 +6,7 @@ export const NAV_LINKS: NavLink[] = [
     route: "/",
   },
   {
-    label: "About",
-    route: "/about",
+    label: "Movies",
+    route: "/movies",
   },
 ];
